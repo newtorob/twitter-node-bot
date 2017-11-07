@@ -4,7 +4,7 @@ var Twit = require('twit');
 var T = new Twit(require('./config.js'));
 
 // latest tweets on the '#coding' hashtag.
-var codingSearch = {q: "#coding", count: 10, result_type: "recent"};
+var codingSearch = {q: "#programming", count: 10, result_type: "recent"};
 
 //finds the latest tweet with the #coding hashtag, and retweets it.
 function retweetLatest() {
@@ -35,6 +35,6 @@ function retweetLatest() {
 
 // Try to retweet something ..
 retweetLatest();
-// ...and then every hour after that. Time here is in milliseconds, so
+// ...and then every ten minutes after that. Time here is in milliseconds, so
 // 1000 ms = 1 second, 1 sec * 60 = 1 min, 1 min * 60 = 1 hour --> 1000 * 60 * 60
-setInterval(retweetLatest, 1000 * 60 * 60);
+setInterval(retweetLatest, 1000 * 60 * 10);
