@@ -1,1 +1,10 @@
+.idea
+.idea/*
+.tmp
+.sass-cache
+bower_components
 node_modules
+native
+archive
+config.js
+/dist
